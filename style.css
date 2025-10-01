@@ -1886,7 +1886,7 @@ section{
 /* Footer start */
 .all-footer{
      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), 
-              url('footer_img3.jpeg');
+              url('footer_img.jpg');
 
     position: relative;
     background-position: center;
