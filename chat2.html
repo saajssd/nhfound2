@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Dropdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 40px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .dropdown .drop-btn {
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      padding-right: 16px;
+    }
+
+    .dropdown::after {
+      content: "▾";
+      position: absolute;
+      right: 0;
+      top: 2px;
+      font-size: 12px;
+      color: #888;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown.active::after {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      background: #fff;
+      min-width: 120px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown.active .dropdown-content {
+      max-height: 300px;
+      opacity: 1;
+    }
+
+    .dropdown-content div {
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: normal;
+    }
+
+    .dropdown-content div:hover {
+      background: #f3f3f3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <button class="drop-btn">PROJECT</button>
+    <div class="dropdown-content">
+      <div>Project 1</div>
+      <div>Project 2</div>
+      <div>Project 3</div>
+    </div>
+  </div>
+
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <button class="drop-btn">FOCUS</button>
+    <div class="dropdown-content">
+      <div>Focus A</div>
+      <div>Focus B</div>
+      <div>Focus C</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(el) {
+      el.classList.toggle("active");
+    }
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function(e) {
+      document.querySelectorAll(".dropdown").forEach(drop => {
+        if (!drop.contains(e.target)) {
+          drop.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

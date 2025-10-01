@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Horizon Fundation</title>
+    <link rel="shortcut icon" href="nhfoundation-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- others  -->
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="forntpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="lightbox.css">
+
+</head>
+<style>
+
+  .sub-header {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(slider_img2.jpg); 
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+     font-family: "Patrick Hand", cursive;
+     z-index: 999;
+}
+.sub-header  h1{
+    padding-top: 15%;
+    color: #ffffff;
+     font-family: "Patrick Hand", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 60px;
+     text-align: center;
+}
+.sub-header  h3{
+    padding-top: 10px;
+    color: #d6ddd6;
+     font-family: "Patrick Hand", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+
+    }
+
+    .donate-container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      height: 100vh;
+      margin: 0;
+    }
+
+    .donate-text h1 {
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      line-height: 1.3;
+    }
+
+    .numbers {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .number-box {
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2px solid #333;
+      width: 250px;
+      padding-bottom: 5px;
+    }
+
+    .number-box span {
+      font-weight: normal;
+      margin-top: 5px;
+    }
+
+    .donate-img img {
+      width: 250px;
+      margin-right: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .donate-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+
+<body>
+  <header>
+    <div class="nav-contacts">
+      <!-- Starts of top-contacts-navbar -->
+      <div class="nav-contact-flex">
+        <div class="nav-phone">
+          <a href=""><i></i></a>
+          <a href="">
+            <p class="nav-phone-link">
+              <i class="fa-solid fa-phone-volume"></i>+8801824129883
+            </p>
+          </a>
+        </div>
+        <a href="doante.html">
+          <div class="doante-nav">
+            <button class="btn-doante">Donate</button>
+          </div>
+        </a>
+        <div class="nav-facebook">
+          <a href=""><i></i></a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100091759538437
+">
+            <p class="nav-facebook-link">
+              <i class="fa-brands fa-square-facebook"></i>NHfoundation
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+
+
+      <a href="#" class=" fuc5"><img class=" fuc5" id="fuc5" src="nhfoundation-logo.png" alt=""></a>
+      <a href="#" class="brand"><img src="nhfoundation-logo.png" alt=""></a>
+      <div class="menu-btn" id="fuc2">
+        <i class="fa-solid fa-bars" onclick="showMenu()" id="fuc" style="color: bisque;"></i>
+        <i class="fa-solid fa-xmark" id="fuc3" onclick="hideMenu()" style="color: bisque;"></i>
+        <div class="navigation" id="fuc4">
+  <i class="fa-solid fa-xmark nav-close" id="fuc6"></i> <!-- new close icon -->
+          <div class="navigation-items">
+
+            <div><a href="index.html">Home</a></div>
+
+            <div><a href="about.html">About Us</a></div>
+            <div><a href="upcoming_events.html">Causes</a></div>
+            <div><a href="programme_2025.html">Programme</a></div>
+            <div><a href="gallery.html">Gallery</a></div>
+            <div><a href="contactus.html">Contact</a></div>
+
+            <div class="log_in_nav"> <a href="">
+      <button class="button">
+      <span>Log In</span>
+    </button>
+    </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+    <!-- sub-header srt -->
+
+
+    <div class="sub-header">
+        <div class="sub-header-title">
+            <h1>Doante</h1>
+            <h3>Home/Doante-----</h3>
+        </div>
+    </div>
+
+
+    <!-- sub-header-ends -->
+
+ <div class="donate-container">
+ <div class="donate-img"> 
+
+      <!-- Make sure this file exists in the SAME folder as this HTML -->
+      <img src="donation.png" alt="Donate Box">
+</div>
+
+    <div class="donate-text">
+      <h1>DONATE IN THIS<br>NUMBERS</h1>
+      <div class="numbers">
+        <div class="number-box">
+          Bikash Number
+          <span>01918183698</span>
+        </div>
+        <div class="number-box">
+          Nogod Number
+          <span>01824129883</span>
+        </div>
+        <div class="number-box">
+          Upay Number
+          <span>01824129883</span>
+        </div>
+        <div class="number-box">
+          Contact Number
+          <span>01824129883</span>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
+
+  <!-- footer start -->
+
+  <footer>
+    <div class="all-footer">
+      <div class="container4">
+        <div class="about-footer">
+          <img src="nhfoundation-logo.png" alt="">
+          <p> নতুন দিগন্ত সংঘঠন একটি অরাজনৈতিক সেচ্ছাদসেবী সংঘঠন। ২০১৯ সালে "গাজী মোহাম্মাদ আব্দুল্লাহ আল নোমান" এবং "
+          আরিয়ান ইসলাম নাফি" তাদের শিক্ষক থেকে অনুপ্রাণিত হয়ে এ সংঘঠনের কার্যক্রাম আরম্ভ করেন। উক্ত সংঘঠন কোরআন এবং
+          সুন্নাহের আলোকে যথাযথ পরিচালনার চেষ্টা করা হয়।</p>
+        </div>
+        <div class="nav-links-footer">
+          <h2 class="nav-links-tittle "><span>Important Links</span></h2>
+          <a href="https://fireservice.portal.gov.bd/"><h5>FIRESERVISES</h5></a>
+          <a href="https://www.unicef.org/"><h5>UNICEF</h5></a>
+          <a href="https://arab.org/click-to-help/palestine/"><h5>Help Palestine</h5></a>
+
+          <a href="https://muslimhands.org.uk/latest/2025/01/10-ways-you-can-help-palestine-now"><h5>Muslim hands Uk</h5></a>
+         
+
+
+        </div>
+        <div class="servises-footer">
+          <h2 class="nav-links-tittle "><span>Our Sectors</span></h2>
+          <a href=""><h5>Health</h5></a>
+          <a href=""><h5>Education</h5></a>
+          <a href=""><h5>Calamities</h5></a>
+          <a href=""><h5>Food</h5></a>
+          <!-- <a href=""><h5>UNICEF</h5></a> -->
+        </div>
+        <div class="newssletter">
+          <h3>donate and socail section</h3>
+          <a href="doante.html">
+      <button class="button">
+      <span>Donate Now</span>
+    </button>
+    </a>
+          <div class="social-icons">
+  <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+  <!-- <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
+  <!-- <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a> -->
+</div>
+        </div>
+      </div>
+      <div class="details-footer">
+        <div class="call-footer">
+          <div class="call-icon">
+            <img src="img18.webp" alt="">
+          </div>
+          <div class="call-txt">
+            <h2>Call Us Now</h2>
+            <p>+8801824129883</p>
+          </div>
+        </div>
+        <div class="email-footer">
+          <div class="email-icon">
+            <img src="img19.webp" alt="">
+          </div>
+          <div class="email-txt">
+            <h2>Email Address</h2>
+            <p>nhfoundation43@gmail.com</p>
+          </div>
+        </div>
+        <div class="location-footer">
+          <div class="location-icon">
+            <img src="img20.webp" alt="">
+          </div>
+          <div class="location-txt">
+            <h2>Location</h2>
+            <p>Joydevpur, Gazipur</p>
+          </div>
+        </div>
+      </div>
+      <div class="last-txt">
+        <h4>Developed by <a target="_blank" href="https://www.facebook.com/">Mohammad Safwan</a> from <a href="">MSMS
+            Tech Ld.</a></h4>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- footer end -->
+   
+  <!-- JavaScript start -->
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".swiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+
+
+    const slider = document.getElementById("slider");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    const cardWidth = 370; // card width + margin
+    let autoSlide;
+
+    function nextSlide() {
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        slider.scrollBy({ left: cardWidth, behavior: "smooth" });
+      }
+    }
+
+    function prevSlide() {
+      if (slider.scrollLeft === 0) {
+        slider.scrollTo({ left: slider.scrollWidth, behavior: "smooth" });
+      } else {
+        slider.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      }
+    }
+
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    function startAutoSlide() {
+      autoSlide = setInterval(nextSlide, 3000); // auto every 3s
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlide);
+      startAutoSlide();
+    }
+
+    startAutoSlide();
+
+
+  </script>
+
+
+
+
+
+
+  <script src="scricpt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    gsap.fromTo(
+      ".loading-page",
+      { opacity: 1 },
+      {
+        opacity: 0,
+        display: "none",
+        duration: 1.5,
+        delay: 3.5,
+      }
+    );
+
+    gsap.fromTo(
+      ".logo-name",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        delay: 0.5,
+      }
+    );
+  </script>
+  <script src="scprit.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $('.project-card-section').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      nextArrow: $('.next'),
+      prevArrow: $('.prev'),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    },
+
+
+    );
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+  <script>
+
+
+
+    const images = document.querySelectorAll('.img-slide');
+    const content = document.querySelectorAll('.content');
+    const navButtons = document.querySelectorAll('.nav-btn');
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      // Hide all images and content
+      images.forEach(img => img.classList.remove('active'));
+      content.forEach(content => content.classList.remove('active'));
+      navButtons.forEach(navBtn => navBtn.classList.remove('active'));
+
+      // Show the current image and content
+      images[index].classList.add('active');
+      content[index].classList.add('active');
+      navButtons[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length; // Loop back to 0 after the last slide
+      showSlide(currentIndex);
+    }
+
+
+    showSlide(currentIndex);
+
+
+    setInterval(nextSlide, 3000);
+
+
+
+    // Slider js End
+
+
+
+    // mobile menu js start
+    // const menuBtn = document.querySelector(".menu-btn");
+    // const navigation = document.querySelector(".navigation");
+
+    // menuBtn.addEventListener("click", () => {
+    // menuBtn.classList.toggle("active");
+    // navigation.classList.toggle("active");
+    // });
+
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".img-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function (manual) {
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i)
+      });
+    });
+
+    const button = document.querySelector(".button");
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault;
+      button.classList.add("animate");
+      setTimeout(() => {
+        button.classList.remove("animate");
+      }, 600);
+    });
+  </script>
+
+
+  <script>
+
+let menu = document.getElementById("fuc");   // bars icon
+let close = document.getElementById("fuc3"); // top close (xmark)
+let close2 = document.getElementById("fuc6"); // new close inside nav
+let navi = document.getElementById("fuc4");  // .navigation
+let fuc5 = document.getElementById("fuc5");  // logo
+
+// Show menu
+menu.addEventListener("click", () => {
+  navi.classList.add("active");
+  menu.style.display = "none";
+  close.style.display = "block";
+  fuc5.style.display = "none";
+});
+
+// Hide menu (top x)
+close.addEventListener("click", hideMenu);
+// Hide menu (inside nav x)
+close2.addEventListener("click", hideMenu);
+
+function hideMenu() {
+  navi.classList.remove("active");
+  menu.style.display = "block";
+  close.style.display = "none";
+  fuc5.style.display = "block";
+}
+
+
+
+  </script>
+
+
+
+
+  <script>
+    const cards = document.querySelectorAll('.leader-card');
+    const dotsContainer = document.querySelector('.leader-dots');
+
+    cards.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showCard(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.leader-dots span');
+    let activeIndex = 0; // renamed variable
+
+    function showCard(index) {
+      cards[activeIndex].classList.remove('active');
+      dots[activeIndex].classList.remove('active');
+      activeIndex = index;
+      cards[activeIndex].classList.add('active');
+      dots[activeIndex].classList.add('active');
+    }
+
+    // Auto-slide
+    setInterval(() => {
+      let nextIndex = (activeIndex + 1) % cards.length;
+      showCard(nextIndex);
+    }, 5000);
+  </script>
+
+
+
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    if (window.scrollY > window.innerHeight) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+
+
+  <script src="vanilla-tilt.js"></script>
+
+
+</body>
+
+</html>
