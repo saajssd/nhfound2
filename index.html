@@ -38,6 +38,10 @@
 </head>
 
 <body>
+<!-- Loading Screen -->
+<div id="loader">
+  <img src="Spin@1x-1.0s-200px-200px.gif" alt="Loading..." />
+</div>
 
 <header>
   <div class="nav-contacts">
@@ -400,8 +404,8 @@
             <div class="botom-color">
               <div class="progress-container">
                 <div class="progress">
-                  <div class="progress-bar" style="width:10%"></div>
-                  <div class="progress-text">10%</div>
+                  <div class="progress-bar" style="width:0%"></div>
+                  <div class="progress-text">0%</div>
                 </div>
 
               </div>
@@ -597,6 +601,12 @@
 
   <!-- JavaScript start -->
 
+<script>
+  // Hide loader after page is fully loaded
+  window.addEventListener("load", function() {
+    document.body.classList.add("loaded");
+  });
+</script>
 
 
   <!-- Swiper JS -->
