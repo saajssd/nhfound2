@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charity Site with Page Loader</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Page Loader Overlay */
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      background: #f6f7fb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid rgba(0, 0, 0, 0.1);
+      border-top-color: #ffb703;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .text {
+      margin-top: 14px;
+      font-size: 16px;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Example page content */
+    .content {
+      padding: 60px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="page-loader">
+    <div class="spinner"></div>
+    <div class="text">Loading, please wait...</div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="content">
+    <h1>Welcome to Our Charity!</h1>
+    <p>Together we can make a difference 🌍</p>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("page-loader");
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 500);
+    });
+  </script>
+</body>
+</html>

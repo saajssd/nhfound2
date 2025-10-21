@@ -37,12 +37,15 @@
 
 </head>
 
-<body>
-<!-- Loading Screen -->
-<div id="loader">
-  <img src="Spin@1x-1.0s-200px-200px.gif" alt="Loading..." />
-</div>
 
+<body>
+  <div id="page-loader">
+  <div class="spinner"></div>
+  <div class="text">Loading, please wait...</div>
+</div>
+<!-- Loading Screen -->
+
+  <div class="content">
 <header>
   <div class="nav-contacts">
     <!-- Starts of top-contacts-navbar -->
@@ -594,19 +597,13 @@
   </footer>
 
 
-
+</div>
 
 
   <!-- footer end -->
 
   <!-- JavaScript start -->
 
-<script>
-  // Hide loader after page is fully loaded
-  window.addEventListener("load", function() {
-    document.body.classList.add("loaded");
-  });
-</script>
 
 
   <!-- Swiper JS -->
@@ -688,32 +685,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
     integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    gsap.fromTo(
-      ".loading-page",
-      { opacity: 1 },
-      {
-        opacity: 0,
-        display: "none",
-        duration: 1.5,
-        delay: 3.5,
-      }
-    );
-
-    gsap.fromTo(
-      ".logo-name",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 2,
-        delay: 0.5,
-      }
-    );
-  </script>
+ 
   <script src="scprit.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

@@ -252,3 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // nav ends
+
+
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("page-loader");
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 500);
+    });
