@@ -79,6 +79,25 @@
 
 </style>
 <body>
+
+
+  
+   <div id="loader" class="loader-overlay" role="status" aria-live="polite" aria-label="Loading content">
+    <div style="text-align:center">
+      <div class="spinner" aria-hidden="true">
+        <div class="dot-ring" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="loader-text"></div>
+      <div class="sr-only">Loading. Please wait.</div>
+    </div>
+  </div>
+
+
+ <div id="content" class="site-content" aria-hidden="true">
+
+
    <header>
     <div class="nav-contacts">
       <!-- Starts of top-contacts-navbar -->
@@ -304,9 +323,39 @@
 
 
 
-
+</div>
 
   <!-- footer end -->
+
+<script>
+    (function(){
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('content');
+
+      // Ensure we still show content if resources already loaded or user navigated back
+      function reveal(){
+        loader.classList.add('hidden');
+        loader.setAttribute('aria-hidden','true');
+        content.classList.add('visible');
+        content.removeAttribute('aria-hidden');
+      }
+
+      // Wait at least 1s from DOMContentLoaded (prevents very quick flashes)
+      const minDelay = 1000; // milliseconds
+
+      if (document.readyState === 'complete' || document.readyState === 'interactive'){
+        setTimeout(reveal, minDelay);
+      } else {
+        window.addEventListener('DOMContentLoaded', () => setTimeout(reveal, minDelay));
+      }
+
+      // Bonus: if user prefers reduced motion, don't animate spinner rotation
+      const mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mq && mq.matches){
+        document.querySelectorAll('.dot-ring').forEach(el => el.style.animation = 'none');
+      }
+    })();
+</script>
 
   <!-- JavaScript start -->
 

@@ -8,38 +8,74 @@
 }
 /* Loader background and centering */
 
-    /* Page Loader Overlay */
-    #page-loader {
-      position: fixed;
-      inset: 0;
-      background: #f6f7fb;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+/* html,body{height:100%} */
 
-    .spinner {
-      width: 60px;
-      height: 60px;
-      border: 6px solid rgba(0, 0, 0, 0.1);
-      border-top-color: #ffb703;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
+/* Loader overlay */
+.loader-overlay{
+position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+background:linear-gradient(180deg, #fff 0%, #fff 60%);z-index:9999;
+transition:opacity .5s ease,visibility .5s ease;
+visibility:visible;opacity:1;
+}
 
-    .text {
-      margin-top: 14px;
-      font-size: 16px;
-      color: #333;
-      text-align: center;
-    }
+
+.loader-overlay.hidden{opacity:0;visibility:hidden}
+
+
+/* Visual loader */
+.spinner{
+width:96px;height:96px;border-radius:50%;display:grid;place-items:center;
+position:relative;filter:drop-shadow(0 6px 18px rgba(0,0,0,.12));
+}
+
+
+.spinner::before{
+content:"";position:absolute;inset:0;border-radius:50%;
+border:8px solid rgba(0,0,0,0.08);
+}
+
+
+.dot-ring{
+width:64px;height:64px;border-radius:50%;position:relative;animation:rotate 1s linear infinite;
+}
+
+
+.dot-ring span{
+width:10px;height:10px;border-radius:50%;position:absolute;left:50%;top:0;transform:translateX(-50%);
+background:#FFB703; /* accent color - change to charity brand */
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+
+
+/* make four dots around ring */
+.dot-ring span:nth-child(1){transform:translate(-50%,-50%) rotate(0deg) translateY(-26px)}
+.dot-ring span:nth-child(2){transform:translate(-50%,-50%) rotate(90deg) translateY(-26px)}
+.dot-ring span:nth-child(3){transform:translate(-50%,-50%) rotate(180deg) translateY(-26px)}
+.dot-ring span:nth-child(4){transform:translate(-50%,-50%) rotate(270deg) translateY(-26px)}
+
+
+@keyframes rotate{to{transform:rotate(360deg)}}
+
+
+/* Brand text */
+.loader-text{margin-top:18px;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;font-weight:600;color:#023047}
+
+
+/* The real page content starts hidden and will fade in */
+.site-content{opacity:0;transition:opacity .5s ease;min-height:100vh}
+.site-content.visible{opacity:1}
+
+
+/* Small accessibility helpers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+
+/* Example page styling (feel free to remove) */
+/* header{background:#023047;color:#fff;padding:24px;text-align:center}
+main{padding:32px;max-width:900px;margin:28px auto;font-family:system-ui,Roboto,Arial} */
 
   
 /* @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap"); */
