@@ -12,15 +12,20 @@
 *{box-sizing:border-box;margin:0;padding:0}
 /* html,body{height:100%} */
 
-
-/* Loader overlay */
-.loader-overlay{
-position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
-background:linear-gradient(180deg, #fff 0%, #fff 60%);z-index:9999;
-transition:opacity .5s ease,visibility .5s ease;
-visibility:visible;opacity:1;
+/* Loader overlay with new background + filter */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFB703 0%, #023047 100%);
+  filter: brightness(0.5); /* dim the background by 50% */
+  z-index: 9999;
+  transition: opacity .5s ease, visibility .5s ease;
+  visibility: visible;
+  opacity: 1;
 }
-
 
 .loader-overlay.hidden{opacity:0;visibility:hidden}
 
